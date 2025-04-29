@@ -1,0 +1,44 @@
+/* Tamaños Absolutos */
+header {
+    background-color: #4CAF50;
+    height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    line-height: 100px; /* Centramos verticalmente el texto */
+}
+
+
+/* Tamaños Relativos */
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+
+/* Uso de px y % */
+.caja {
+    background-color: #2196F3;
+    width: 30%; /* Tamaño relativo */
+    height: 200px; /* Tamaño absoluto */
+    color: white;
+    text-align: center;
+    line-height: 200px; /* Centramos verticalmente el texto */
+    font-size: 1.5em; /* Relativo al tamaño de fuente del contenedor */
+}
+
+
+/* Otro ejemplo de valor relativo usando vw y vh */
+footer {
+    background-color: #333;
+    color: white;
+    height: 10vh; /* 10% de la altura de la ventana */
+    font-size: 1rem; /* relativo al root */
+    text-align: center;
+    line-height: 10vh;
+}
+
+
+
+

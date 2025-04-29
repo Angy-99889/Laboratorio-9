@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Flexbox + Grid</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+
+    /* Flexbox para el encabezado */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 15px 30px;
+      flex-wrap: wrap; /* Permite que se acomoden en varias líneas si es necesario */
+    }
+
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+    /* Grid para el contenido */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      min-height: 500px;
+    }
+
+
+    .sidebar {
+      background-color: #ccc;
+      padding: 20px;
+    }
+
+
+    .contenido {
+      background-color: #eee;
+      padding: 20px;
+    }
+
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+
+
+    /* --- Estilos responsive --- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+      }
+
+
+      main {
+        grid-template-columns: 1fr; /* Solo una columna */
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+
+<header>
+  <div class="logo">Mi Web</div>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+
+<main>
+  <div class="sidebar">
+    <h3>Menú Lateral</h3>
+    <p>Opción 1</p>
+    <p>Opción 2</p>
+  </div>
+  <div class="contenido">
+    <h2>Bienvenido</h2>
+    <p>Este es el contenido principal de la página.</p>
+    <p>Aquí puedes agregar artículos, imágenes, videos, etc.</p>
+  </div>
+</main>
+
+
+<footer>
+  &copy; 2025 Mi Web. Todos los derechos reservados.
+</footer>
+
+
+</body>
+</html>
+
+

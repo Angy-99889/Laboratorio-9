@@ -1,0 +1,145 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Estilos generales */
+header {
+    background-color: #4CAF50;
+    color: white;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 2rem;
+}
+
+
+.contenedor {
+    display: flex;
+    height: calc(100vh - 140px); /* Viewport menos header y footer */
+}
+
+
+/* Menú lateral */
+.menu-lateral {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.menu-lateral li {
+    margin: 20px 0;
+}
+
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+/* Sección principal */
+.contenido-principal {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+
+/* Grid de cajas */
+.grid-cajas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+
+.caja {
+    background-color: #2196F3;
+    height: 150px;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1rem;
+}
+
+
+/* ------------------- */
+/* MEDIA QUERIES RESPONSIVE */
+/* ------------------- */
+
+
+/* Tablets: ancho máximo 768px */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+
+    .menu-lateral {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+
+    .menu-lateral ul {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .menu-lateral li {
+        margin: 10px;
+    }
+}
+
+
+/* Móviles: ancho máximo 480px */
+@media (max-width: 480px) {
+    header, footer {
+        font-size: 1.5rem;
+    }
+
+
+    .grid-cajas {
+        grid-template-columns: 1fr; /* Solo una caja por fila */
+    }
+
+
+    .caja {
+        height: 120px; /* Reducimos altura */
+        font-size: 1.5em;
+    }
+
+
+    .menu-lateral a {
+        font-size: 1em;
+    }
+}

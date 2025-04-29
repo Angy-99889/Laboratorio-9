@@ -1,0 +1,90 @@
+/* Layout General con Flexbox */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    height: 80px; /* Tamaño absoluto */
+    text-align: center;
+    line-height: 80px;
+    font-size: 2rem; /* Tamaño relativo */
+}
+
+
+.contenedor {
+    display: flex;
+    height: calc(100vh - 140px); /* 100% altura de ventana menos header y footer */
+}
+
+
+/* Menú lateral fijo usando tamaños absolutos */
+.menu-lateral {
+    width: 200px; /* Tamaño absoluto */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.menu-lateral li {
+    margin: 20px 0;
+}
+
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+/* Sección principal usando Grid */
+.contenido-principal {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+
+.grid-cajas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Diseño flexible */
+    gap: 20px;
+}
+
+
+.caja {
+    background-color: #2196F3;
+    height: 150px; /* Tamaño absoluto */
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+/* Footer adaptativo */
+footer {
+    background-color: #222;
+    color: white;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1rem;
+}
+
+
